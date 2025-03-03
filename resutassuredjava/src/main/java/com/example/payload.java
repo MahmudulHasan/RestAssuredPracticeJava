@@ -41,4 +41,24 @@ public class payload {
                 "]\r\n" +
                 "}\r\n";
     }
+    public static String AddBook(String isbn, String aisle) {
+        return "{\r\n" +
+                "\"name\":\"Learn Appium Automation with Java\",\r\n" +
+                "\"isbn\":\"" + isbn + "\",\r\n" +
+                "\"aisle\":\"" + aisle + "\",\r\n" +
+                "\"author\":\"John foe\"\r\n" +
+                "}";
+    }
+    public static String DeleteBook(String id) {
+        return "{\r\n" +
+                "\"ID\" : \"" + id + "\"\r\n" +
+                "}";
+    }
+    public static String UpdateBook(String id, String isbn, String aisle) {
+        return "{\r\n" +
+                "\"ID\" : \"" + id + "\",\r\n" +
+                "\"aisle\":\"" + aisle + "\",\r\n" +
+                "\"isbn\":\"" + isbn + "\"\r\n" +
+                "}";
+    }
 }
