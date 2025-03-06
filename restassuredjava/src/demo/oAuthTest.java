@@ -1,18 +1,24 @@
 package demo;
 
+import static io.restassured.RestAssured.given;
+import static com.jayway.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+import io.restassured.path.json.JsonPath;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import pojo.Api;
 import pojo.GetCourse;
+import pojo.WebAutomation;
+import org.testng.Assert;
 
 public class oAuthTest {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	String[] courseTitles = {"Selenium Webdriver Java","Cypress","Protractor"};
 		
-	String response = 	given()
+	String response = given()
 		.formParams("client_id","692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com")
 		.formParams("client_secret","erZOWM9g3UtwNRj340YYaK_W")
 		.formParams("grant_type","client_credentials")
