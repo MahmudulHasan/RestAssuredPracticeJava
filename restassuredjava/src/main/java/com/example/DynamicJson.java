@@ -25,5 +25,4 @@ public class DynamicJson {
     public Object[][] getData() {
         return new Object[][] {{"asdf", "1234"}, {"qwer", "5678"}, {"zxcv", "9012"}};
     }
-    
 }
